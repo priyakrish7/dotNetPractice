@@ -1,0 +1,36 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+    
+using System;
+using System.Collections.Generic;
+
+public class HelloWorld
+{
+    public static List<string> getNames(List<string> list){
+         List<string> names = new List<string>();
+         for(int i =0; i < list.Count; i++)
+        {
+            //Console.WriteLine ("Name:"+list[i] +s); 
+            if(!names.Contains(list[i])){
+                names.Add(list[i]);
+            }
+         }
+         return names;
+    }
+    public static void Main(string[] args)
+    {
+        String s = "Praneeth";
+        List<string> list = new  List<string>();
+        list.Add("Sai");
+        list.Add("sai");
+        list.Add("sai");
+        list.Add("praneeth");
+        list.Add("praneeth");
+        List<string> names = getNames(list);
+        for(int j =0; j < names.Count; j++)
+         {
+             Console.WriteLine ("Name:"+names[j]); 
+         }
+
+    }
+}
