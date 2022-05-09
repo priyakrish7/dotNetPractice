@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+
+public class LinearSearch
+{
+    public int searchIndex( List<string> list){
+       for(int i = 0;i<list.Count; i++)
+            {
+                if(list[i]=="yamini")
+                {
+                 return i;
+                 break;
+                }
+            }
+            return -1;
+    }
+    public static void Main(string[] args)
+    {
+        List<string> list = new List<string>
+            { "sai", "krishna", "yamini", "praneeth", "rdsp", "rdura", "deva" };
+            LinearSearch obj = new LinearSearch();
+            int index = obj.searchIndex(list);
+            Console.WriteLine ("Index:"+index);
+            
+       
+    }
+}
