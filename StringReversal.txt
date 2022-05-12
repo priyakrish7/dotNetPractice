@@ -1,0 +1,20 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+    
+using System;
+
+public class StringReversal
+{
+    public static void Main(string[] args)
+    {
+        string s ="praneeth";string reverse="";
+        int len = s.Length;
+        while(len > 0)
+        {
+            reverse = reverse + s[len-1];
+            len--;
+            
+        }
+        Console.WriteLine ("Reversed string : "+reverse);
+    }
+}
