@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+
+public class RemoveDuplicateNumbers
+{
+    public static void printNonDuplicateValues(int[] arr){
+       List<int> list = new List<int>();
+       for(int i =0; i < arr.Length; i++){
+            if(!list.Contains(arr[i])){
+                list.Add(arr[i]);
+            }
+       }
+       for(int j=0;j<list.Count;j++)
+        Console.Write(list[j]+" ");
+    }
+    public static void Main(string[] args)
+    {
+        int[] arr = new int[]{1,1,1,2,3,4,5,5,7,9,0,21,0,36};
+        printNonDuplicateValues(arr);
+        
+    }
+}
