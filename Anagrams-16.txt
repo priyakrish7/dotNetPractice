@@ -1,0 +1,39 @@
+/*
+   For suppose you are given two string s + "dice", p = "iced"
+   
+   Your mission is to find if they are anagrams are not.
+   
+   Two words can be called as anagrams if both words are made of same characters and same character counts
+   
+   for suppose the words iced and dice are called anagrams since 
+   
+   iced --> i: 1, c: 1, e: 1, d: 1
+   dice --> d: 1, i: 1, c: 1, e: 1
+   
+   Complete the function anagrams and return a boolean value stating true or false 
+
+   
+*/
+    
+using System;
+using System.Collections.Generic;
+
+public class Anagrams
+{
+    
+    public bool anagrams(string s, string p) {
+        // Add your code here
+        return false; // change your return statement based on the requirement.
+    }
+    
+    public static void Main(string[] args)
+    {
+        Anagrams a = new Anagrams();
+        string s = "globe", p = "bloge";
+        bool result = a.anagrams(s, p);
+        if (result)
+            Console.WriteLine("The given words "+s+", "+p+" are anagrams");
+        else 
+            Console.WriteLine("The given words "+s+", "+p+" are not anagrams");
+    }
+}

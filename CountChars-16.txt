@@ -1,0 +1,31 @@
+/*
+   For suppose given a string s = "rudradeva"
+   
+   Your mission is to find the character count of each character in that string
+   
+   Sample output would look something like this.
+   
+   r: 2, u: 1, d: 2, a: 2, e:1, v:1 
+   
+   Note: The order of the characters in the output doesn't matter.
+   
+      r: 2, u: 1,  e:1, v:1 , d: 2, a: 2, --> this output also is correct one.
+
+   
+*/
+    
+using System;
+using System.Collections.Generic;
+
+public class CountChars
+{
+    
+    public static void countChars(string s) {
+        Console.WriteLine("count of the chars: ");
+    }
+    
+    public static void Main(string[] args)
+    {
+      countChars("rudradeva");
+    }
+}

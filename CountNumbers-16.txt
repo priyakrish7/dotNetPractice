@@ -1,0 +1,33 @@
+
+/*
+
+    Let us suppose you are given an array 
+    int []arr = new int[] {1,1,1,3,7,9, 7,6,3,8,0,0,22,46,5,8}
+    print the number and it's count
+    
+    Sample output: 
+    
+    1: 3, 3: 2, 7: 2, 9: 1, 6:1, 8: 2, 0: 2, 22: 1, 46: 1, 5: 1
+    
+    Note: The order of the numbers doesn't matter, for example for the same above input --> The below output is also correct
+         9: 1, 6:1, 8: 2, 0: 2, 22: 1, 46: 1, 5: 1, 1: 3, 3: 2, 7: 2
+
+*/
+
+    
+using System;
+
+public class CountNumbers
+{
+    
+    public void countNumbers(int []arr) {
+        Console.WriteLine("count of all numbers is: ");
+    }
+    
+    public static void Main(string[] args)
+    {
+        CountNumbers numbers = new CountNumbers();
+        int []arr = new int[] {1,1,1,3,7,9, 7,6,3,8,0,0,22,46,5,8};
+        numbers.countNumbers(arr);
+    }
+}

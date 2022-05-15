@@ -1,0 +1,15 @@
+/*
+    In this class you are required to create any dictionary and traverse through all the objects (keys and values) inside the dictionary
+*/
+    
+using System;
+using System.Collections.Generic;
+
+public class DictionaryDemo
+{
+    
+    public static void Main(string[] args)
+    {
+      
+    }
+}
