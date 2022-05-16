@@ -10,6 +10,15 @@ public class DictionaryDemo
     
     public static void Main(string[] args)
     {
-      
+      IDictionary<string, int> numbers = 
+        new Dictionary<string, int>();
+        numbers.Add("Priya",533004);
+        numbers.Add("Praneeth",500072);
+        foreach(KeyValuePair<string, int> i in numbers){
+            Console.WriteLine(i.Value +" ");
+        }
     }
 }
+
+
+

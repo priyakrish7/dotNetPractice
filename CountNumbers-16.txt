@@ -16,12 +16,26 @@
 
     
 using System;
+using System.Collections.Generic;
 
 public class CountNumbers
 {
     
     public void countNumbers(int []arr) {
+        IDictionary<int, int> numbers = 
+        new Dictionary<int, int>();
+        foreach(int i in arr){
+            if(numbers.ContainsKey(i)){
+                numbers[i]=numbers[i]+1;
+            }else{
+                numbers.Add(i,1);
+            }
+        }
         Console.WriteLine("count of all numbers is: ");
+        foreach(KeyValuePair<int, int> i in numbers){
+           Console.WriteLine(i);   
+        }
+        
     }
     
     public static void Main(string[] args)

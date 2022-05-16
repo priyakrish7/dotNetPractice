@@ -21,7 +21,18 @@ public class CountChars
 {
     
     public static void countChars(string s) {
-        Console.WriteLine("count of the chars: ");
+        IDictionary<char, int> numbers = new Dictionary<char, int>();
+        foreach(char i in s){
+            if(numbers.ContainsKey(i)){
+                numbers[i] = numbers[i]+1;
+            }else{
+                numbers.Add(i,1);
+            }
+        }
+       
+        foreach(KeyValuePair<char, int> key in numbers){
+            Console.WriteLine(key); 
+        }
     }
     
     public static void Main(string[] args)
