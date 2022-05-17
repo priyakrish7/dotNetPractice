@@ -15,7 +15,7 @@ public class SwapNumbers
            Console.WriteLine();
            Console.WriteLine(j +j+ value at j +arr[j]);
            Console.WriteLine();
-           if (arr[i]  arr[j])
+           if (arr[i] > arr[j])
            {
               Console.WriteLine(we have to swap );
               int temp = arr[i];
