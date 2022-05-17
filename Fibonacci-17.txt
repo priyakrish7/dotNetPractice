@@ -1,0 +1,27 @@
+
+/*
+    Generate fibonacci series upto a given number
+    
+    if n = 5
+    
+    output: 1 1 2 3 5
+    
+    To find the current number in the fibonacci series, we have to add the last 
+    two numbers.
+    
+*/
+using System;
+
+public class Fibonacci
+{
+    public void generateFibonacci(int num) {
+        
+    }
+    
+    public static void Main(string[] args)
+    {
+        int num = 10;
+        Fibonacci fib = new Fibonacci();
+        fib.generateFibonacci(num);
+    }
+}

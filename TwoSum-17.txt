@@ -1,0 +1,31 @@
+
+/*
+    Suppose you are given an array 
+    
+    [1,2,3,4, 7, 9, 11];
+    
+    you mission is to find two numbers whose sum will be equal to the given target.
+    
+    For the above array, if target is 11, then output can be either 
+    [2,9] or [7, 4] 
+    
+    But the answer can't be 11 because, 11 is a single number and we need to have atleast two numbers in the output.
+    
+    If you can't find the target through any pair return [-1, -1]
+*/
+using System;
+
+public class TwoSum
+{
+    public int[] findTwoSum(int []arr, int target) {
+        
+    }
+    
+    public static void Main(string[] args)
+    {
+        int []arr = new int[]{1,2,3,4, 7, 9, 11};
+        TwoSum two = new TwoSum();
+        Console.WriteLine(two.findTwoSum(arr, 11));
+    
+    }
+}
