@@ -14,18 +14,48 @@
     If you can't find the target through any pair return [-1, -1]
 */
 using System;
+using System.Collections.Generic;
+
 
 public class TwoSum
 {
-    public int[] findTwoSum(int []arr, int target) {
+    public int[] findTwoSums(int []arr, int target) {
         
+        for(int i=0; i<arr.Length; i++){
+            for(int j=i+1; j<arr.Length; j++ ){
+                if((arr[i]+arr[j]) == target){
+                    return new int[]{arr[i],arr[j]}; 
+                }
+            }
+        }
+      return new int[]{-1, -1};
     }
+    
+    //Using Dictionary
+    public int[] findTwoSum(int []arr, int target) {
+        IDictionary<int, int> dict = new Dictionary<int, int>();
+        
+        for(int i = 0;i < arr.Length; i++) {
+            int sum = target - arr[i];
+            if (dict.ContainsKey(sum)) {
+                return new int[]{arr[i], sum}; 
+            } else {
+                dict.Add(arr[i], i);
+            }
+        }
+        foreach(KeyValuePair<int, int> pair in dict) 
+            Console.WriteLine(pair);
+        return new int[]{-1, -1};
+    }
+    
+  
     
     public static void Main(string[] args)
     {
         int []arr = new int[]{1,2,3,4, 7, 9, 11};
         TwoSum two = new TwoSum();
-        Console.WriteLine(two.findTwoSum(arr, 11));
+        int[] res = two.findTwoSum(arr, 11);
+        foreach(int i in res)Console.Write(i+" ");
     
     }
 }
