@@ -1,0 +1,23 @@
+/*  
+    Define five functions
+    
+    1st Function --> returns a list, get the output from function call and print it
+    2nd Function --> returns an array, get output and print
+    
+    3rd Function --> returns String
+    
+    4th --> returns boolean
+    
+    5th --> dictionary
+    
+*/
+    
+using System;
+
+public class UnderstandingFunctions
+{
+    public static void Main(string[] args)
+    {
+        // Console.WriteLine ("Hello Mono World");
+    }
+}
