@@ -1,0 +1,21 @@
+/*
+    Given a string s = "back";
+    return the sorted string.
+    
+    The output for above input "back" is "abck"
+*/
+using System;
+
+public class StringSort
+{
+    public static string sortString(string s) {
+        return "";
+    }
+    
+    public static void Main(string[] args)
+    {
+        String s = "back";
+        Console.WriteLine(sortString(s));
+        // Console.WriteLine ("Hello Mono World");
+    }
+}
