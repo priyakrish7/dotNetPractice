@@ -1,0 +1,53 @@
+/*
+   Given an array and a range, return the element that is missing in that range.
+   
+   For suppose if given array is 
+   {2,5,6,3,4,1,8} and range is 8 
+   
+   we can see that in the range 1--> 8 number 7 is missing.
+   
+   so we return 7
+   
+   
+*/
+using System;
+using System.Collections.Generic;
+
+public class MissingNumberTwo
+{
+    public static int missingNumber(int[] arr, int range) {
+        int i=0;
+        for(i = 0; i< arr.Length - 1; i++){
+            int current = arr[i];
+            int next = arr[i+1];
+            if(next-current != 1)
+            return current+1;
+          // 0 1 2 3 4 5 6 7 8 
+        }
+        if(i == arr.Length-1 && arr[i] == range-1)
+        return range;
+        
+        return 0;
+    }
+    public static int[] sort(int[] arr){
+        for(int i =0; i < arr.Length; i++){
+            for(int j = i+1; j< arr.Length;j++){
+                if(arr[i]>arr[j]){
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        return arr;
+    }
+   
+    
+    public static void Main(string[] args)
+    {
+        int[] arr = new int[]{2,5,6,3,4,1,7,8,9};
+        int range = 10;
+        Console.WriteLine(missingNumber(sort(arr), range));
+
+    }
+}

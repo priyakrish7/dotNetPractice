@@ -8,14 +8,34 @@ using System;
 
 public class StringSort
 {
-    public static string sortString(string s) {
-        return "";
+    public static void sortString(char[] arr) {
+        for(int i = 0; i<arr.Length; i++){
+            for(int j = i+1; j<arr.Length; j++){
+                if(arr[i] > arr[j]){
+                    char temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
     }
     
     public static void Main(string[] args)
     {
-        String s = "back";
-        Console.WriteLine(sortString(s));
-        // Console.WriteLine ("Hello Mono World");
+        string s = "back"; 
+        char[] arr = new char[s.Length];
+        int index = 0;
+        foreach(char c in s){
+            arr[index] = c;
+            index++;
+        }
+        //arr = {b,a,c,k}
+        sortString(arr);//{a,b,c,k}
+        string res = "";
+        foreach(char c in arr){
+            res += c;
+        }
+          Console.WriteLine(res);
+
     }
 }

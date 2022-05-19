@@ -1,0 +1,24 @@
+/*
+    Given a string s = "back";
+    return the sorted string.
+    
+    The output for above input "back" is "abck"
+*/
+using System;
+
+public class StringSort
+{
+
+    public static void Main(string[] args)
+    {
+        string str = "back";
+        string output = "";
+        char[] ch = new char[str.Length];
+        ch = str.ToCharArray();
+        Array.Sort(ch);//{a,b,c,k}
+        foreach (char i in ch){
+            output = output + i;//abck
+        }
+        Console.WriteLine("Sorted String is: " +output);
+    }
+}
