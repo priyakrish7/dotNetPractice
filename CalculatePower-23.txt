@@ -1,0 +1,22 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+    
+using System;
+
+public class CalculatePower
+{
+    public static int GetPower(int num,int power){
+        int temp = 1, count = 1;
+        while(count <= power){
+            temp = temp * num;
+            count++;
+        }
+        return temp;
+    }
+    public static void Main(string[] args)
+    {
+        int num = 11, power = 3;
+        int res = GetPower(11, 3);
+        Console.WriteLine("Result is: " +res);
+    }
+}
