@@ -27,7 +27,7 @@ public class PrimeNumbersInRange
     
     public static void printPrimesUptoN(int n) {
         int a = 1;
-        Console.Write("PrimeNos upto "+n+ " are :" +a+" ");
+        Console.Write("PrimeNos upto "+n+ " are :" +a+" "); // if you are already printing 1 why to check for 0, 1 again?
         for(int i = 0; i <= n; i++){
             if(isPrime(i)){
                 Console.Write(i+ " ");
