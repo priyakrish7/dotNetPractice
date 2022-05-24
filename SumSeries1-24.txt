@@ -1,14 +1,9 @@
 /*
     Print the sum of numbers upto the given n
-    
     for suppose if the given input is 5 
-    
     then output should be 15 
-    
     Explanation: 5 + 4 + 3 + 2 + 1 = 15
-    
     If the input is 10 output should be 55 
-    
     Explanation: 10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 = 55
 */
     
@@ -17,7 +12,11 @@ using System;
 public class SumSeries
 {
     public static void SumUptoN(int n) {
-        // Add your code below
+        int sum = 0;
+        for(int i = 1; i<=n; i++){
+            sum = sum + i;
+        }
+          Console.Write("Sum of "+ n+" is :" +sum);
     }
     
     public static void Main(string[] args)

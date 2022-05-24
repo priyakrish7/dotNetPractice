@@ -1,14 +1,9 @@
 /*
     You are required to print fibonacci using multiplication.
-    
     For example if input = 5
-    
     output should be 1 2 2 4 8
-    
     From above you can see that the first two numbers of multiplicative fibonacci series are 1 and 2 
-    
     input = 8 
-    
     output should be 1 2 2 4 8 32 256 8192
 */
     
@@ -16,9 +11,17 @@ using System;
 
 public class FibonacciMultiplication
 {
-    public static void MulitFibonacci(int n) {
-        // Add your code below
-    }
+    public static void MultiFibonacci(int n) {
+        int a = 1, b = 2, sum = 1;
+        Console.Write("MultiFibonacci of "+n+ " is :"+a+" "+ b+ " ");
+            for(int i = 2; i < n ; i++){
+                sum = a * b;
+                a = b;
+                b = sum;
+                Console.Write(sum+ " ");
+            }
+        }
+    
     
     public static void Main(string[] args)
     {

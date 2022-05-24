@@ -1,20 +1,12 @@
 /*
     Given a number n print all the prime numbers upto n 
-    
     For suppose given input is 12 
-    
     Prime numbers from the range 1 to 12 are 
-    
     1, 2, 3, 5, 7, 11
-    
     For suppose given input is 25 
-    
     Prime numbers from the range of 1 to 23 are 
-    
     1, 2, 3, 5, 7, 11, 13, 17, 19, 23 --> Note 23 is also included.
-    
-    
-    // Try to  make use of for loops before going to while loop.
+    // Try to  make use of for loops before going to while loop
 */
     
 using System;
@@ -22,16 +14,30 @@ using System;
 public class PrimeNumbersInRange
 {
     public static bool isPrime(int n) {
-        // Add code to check if a number is prime number or not.
-        
+        // Add code to check if a number is prime number or not
+        int fact = 0;
+        for(int i = 1; i < n; i++){
+            if(n % i == 0)
+            fact++;
+        }
+        if(fact == 1)
+        return true;
+        return false;
     }
     
     public static void printPrimesUptoN(int n) {
-        // Add your code below
+        int a = 1;
+        Console.Write("PrimeNos upto "+n+ " are :" +a+" ");
+        for(int i = 0; i <= n; i++){
+            if(isPrime(i)){
+                Console.Write(i+ " ");
+            }
+        }
     }
     
     public static void Main(string[] args)
     {
-        printPrimesUptoN(23); // 1, 2, 3, 5, 7, 11, 13, 17, 19, 23 
+        printPrimesUptoN(23); 
+        // 1, 2, 3, 5, 7, 11, 13, 17, 19, 23 
     }
 }
