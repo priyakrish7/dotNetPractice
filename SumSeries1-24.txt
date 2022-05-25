@@ -6,7 +6,7 @@
     If the input is 10 output should be 55 
     Explanation: 10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 = 55
 */
-    
+
 using System;
 
 public class SumSeries
@@ -19,8 +19,15 @@ public class SumSeries
           Console.Write("Sum of "+ n+" is :" +sum);
     }
     
+    //Another way of doing it.
+    public static int SumsUptoN(int n) {
+        return (n * (n + 1))/2;
+    } 
+    
     public static void Main(string[] args)
     {
         SumUptoN(8); // output should be 36
+        Console.WriteLine();
+        Console.WriteLine("sum is: "+SumsUptoN(8));
     }
 }
