@@ -1,0 +1,29 @@
+/*
+    For suppose given string is "aaaaabbbccczzzddd"
+    
+    output is a5b3c3z3d3
+    
+    because the a's are 5, b's are 3
+    
+    For suppose given string is "bbbcx"
+    
+    output is b3c1x1
+    
+*/
+    
+using System;
+
+public class StringCompression1
+{
+    
+    public static void compressString(string s) {
+        // add your code below
+    }
+    
+    public static void Main(string[] args)
+    {
+        // Console.WriteLine ("Hello Mono World");
+        string s = "aaaaabbbccczzzddd";
+        compressString(s);
+    }
+}

@@ -1,0 +1,42 @@
+/*
+    For suppose given array is  [-4,-1,0,3,10]
+    
+    the output should be [0,1,9,16,100].
+    
+    Explanation: 
+    
+    given array is [-4,-1,0,3,10]
+                                                -4 *2 1*2, 0, 3*2, 10*2
+    the sqaures of each element of the array is [16,  1,  0,  9,  100].
+    
+    After sorting the array is [0,1,9,16,100]. which is the required output
+    
+*/
+using System;
+
+public class SortSquaresOfArray
+{
+    
+    public static int[] sortSquares(int []arr) {
+        // Add your code below
+    }
+    
+    public static void printArr(int []arr) {
+        foreach(int i in arr) {
+             Console.Write(i+" ");
+        }
+    }
+    
+    public static void Main(string[] args)
+    {
+        int []arr = new int[]{-4,-1,0,3,10};
+         // For above array output should be [0,1,9,16,100]
+        int []brr = new int []{-7,-3,2,3,11};
+        // For above array output should be 4,9,9,49,121
+        sortSquares(arr);
+        Console.WriteLine(" ");
+        sortSqaures(brr);
+        
+       
+    }
+}

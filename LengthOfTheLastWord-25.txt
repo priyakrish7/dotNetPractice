@@ -1,0 +1,27 @@
+/*
+    For suppose given string is "life is full of possibilites"
+    The output should be length of the word possibilites --> 12
+    
+    For suppose string is "improve your vision"
+    the output should be the length of the last word vision --> 6
+*/
+    
+using System;
+
+public class StringLastWordLength
+{
+    
+    public static int lastWordLength(string s) {
+        // add your code below
+        
+    }
+    
+    public static void Main(string[] args)
+    {
+        // Console.WriteLine ("Hello Mono World");
+       string s = "life is full of possibilites";
+       string b = "improve your vision";
+       Console.WriteLine(lastWordLength(s));
+       Console.WriteLine(lastWordLength(b));
+    }
+}
