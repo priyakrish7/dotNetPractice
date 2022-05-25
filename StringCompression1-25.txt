@@ -1,23 +1,29 @@
 /*
     For suppose given string is "aaaaabbbccczzzddd"
-    
     output is a5b3c3z3d3
-    
     because the a's are 5, b's are 3
-    
-    For suppose given string is "bbbcx"
-    
-    output is b3c1x1
-    
+    For suppose given string is "bbbcx",output is b3c1x1
 */
-    
 using System;
+using System.Collections.Generic;
 
 public class StringCompression1
 {
     
     public static void compressString(string s) {
-        // add your code below
+        char[] ch = s.ToCharArray();
+       IDictionary<char,int> dict = new Dictionary<char, int>();
+            foreach(char i in s){
+            if(dict.ContainsKey(i)){
+                dict[i]=dict[i]+1;
+            }
+            else{
+                dict.Add(i,1);
+            }
+        }
+        foreach(var item in dict.Keys){
+             Console.Write(item + "" + dict[item]);
+        }
     }
     
     public static void Main(string[] args)
@@ -25,5 +31,6 @@ public class StringCompression1
         // Console.WriteLine ("Hello Mono World");
         string s = "aaaaabbbccczzzddd";
         compressString(s);
+
     }
 }

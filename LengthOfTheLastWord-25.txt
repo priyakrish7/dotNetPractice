@@ -12,16 +12,25 @@ public class StringLastWordLength
 {
     
     public static int lastWordLength(string s) {
-        // add your code below
+        int len = s.Length;
+        int count = 0;
+        for(int i = len-1; i >= 0; i--){
+            if(s[i] != ' '){
+                count++;
+            }
+            else{
+                return count;
+            }
+        }
+        return count;
         
     }
     
     public static void Main(string[] args)
     {
-        // Console.WriteLine ("Hello Mono World");
        string s = "life is full of possibilites";
        string b = "improve your vision";
-       Console.WriteLine(lastWordLength(s));
-       Console.WriteLine(lastWordLength(b));
+       Console.WriteLine ("Last word length of s is:"+lastWordLength(s));
+       Console.WriteLine ("Last word length of b is:" +lastWordLength(b));
     }
 }
