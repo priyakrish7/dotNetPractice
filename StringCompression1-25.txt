@@ -21,6 +21,7 @@ public class StringCompression1
                 dict.Add(i,1);
             }
         }
+        // excellent, learning a new way of iterating dictionary 
         foreach(var item in dict.Keys){
              Console.Write(item + "" + dict[item]);
         }
